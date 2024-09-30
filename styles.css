@@ -1,0 +1,241 @@
+body {
+ padding: 0;
+ margin: 0;
+}
+
+#menu {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background-color: #03ec03;
+    border-bottom: 1.5px solid green;
+}
+
+.menu-link {
+    font-family: sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 10%;
+    margin-top: 20px;
+    
+}
+
+#h1-name {
+    margin-top: 60px;
+    margin-left: 20px;
+    font-family: sans-serif;
+    
+}
+
+#cesky,
+#cesky-yt {
+  background-color: green;
+  margin-left: 20px;
+  border-radius: 0;
+  border: 1px solid green;
+  transition: background-color 0.3s linear;
+    
+}
+
+#english,
+#english-yt {
+  background-color: white;
+  border-radius: 0;
+  border: 1px solid green;
+  transition: background-color 0.3s linear;
+}
+
+
+#main-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#contact-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 110px;
+    background-color: #03ec03;
+    border-top: 1.5px solid green;
+}
+
+.contact-link {
+    font-family: sans-serif;   
+}
+
+#contact-1 {
+    margin-left: 10%;
+    margin-bottom: 7px;
+    max-width: 100%;
+}
+
+#contact-2 {
+    margin-top: 0;
+    width: 100%;
+    margin-left: 10%;
+}
+
+#main-p {
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+@media (max-width: 300px) {
+   .menu-link {
+    margin-right: 5px;
+    margin-top: 10px;  
+   } 
+   
+   #contact-1 {
+    margin-left: 4px;
+    font-size: 17px;
+    }
+   #contact-2 {
+    margin-left: 15px;
+    font-size: 22px;
+    }
+
+}
+
+
+
+
+/* youtube.html */
+
+.long-vid-text {
+    max-width: 90%;
+    font-family: sans-serif;
+    margin-left: 20px; 
+}
+
+.long-vid-title {
+    margin-left: 20px;
+    font-family: Roboto;
+    
+}
+
+.vid-title {
+    width: 100px;
+    font-family: Roboto;
+    margin-left: 20px;
+    
+}
+
+#yt-name-title {
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+.short-img {
+    height: 300px;
+    width: 170px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.vid-img {
+    width: 350px;
+    height: 190px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.vid-text {
+    font-family: sans-serif;
+    margin-left: 20px;
+    width: 100px;
+    
+}
+
+.title-text-div {    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%; 
+}
+
+#short1,
+#short2,
+#short3,
+#short4,
+#short5,
+#short6,
+#short7,
+#short8,
+#short9,
+#short10,
+#short11,
+#short12 {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 350px; 
+    flex-wrap: nowrap;
+}
+
+#shorts-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+
+/* Dobro */
+
+
+#dobro-title {
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+
+#dobro-p {
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+
+#donate-buttons-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 2px;
+}
+
+.donate-button {
+   width: 200px;
+   height: 60px;
+   background-color: darkorange;
+   color: white;
+   font-family: "Bebas Neue", sans-serif;
+   font-size: 21px
+}
+
+#last-donate-button {
+    background-color: #000000
+}
+
+.donate-button:hover {
+    cursor: pointer;
+}
+
+#not-donate-button {
+    margin-top: 15px;
+    height: 30px;
+    width: 200px;
+    background-color: #cecece;  
+    transition: background-color 0.5s linear;
+}
+
+#not-donate-button:hover {
+    cursor: not-allowed;
+    background-color: #9f9f9f;
+}
+
