@@ -43,3 +43,47 @@ if (savedLanguage === "czech") {
 }
     
 };
+
+
+// menu button:
+
+const button = document.getElementById("menu-button");
+const menu = document.getElementById("menu");
+const heading = document.getElementById("dobro-title");
+const again = document.getElementsByClassName("menu-link");
+button.addEventListener("click", () => {
+    if (button.innerHTML != "×") {
+        menu.style.display = "flex";
+        menu.style.height = "190px";
+        heading.style.marginTop = "140px";
+        button.innerHTML = "×";
+        button.style.border = "none";
+        again[0].style.marginTop = "70px";
+        again[1].style.marginTop = "110px";
+        again[2].style.marginTop = "150px";
+        for (i=0; i < 3; i++) {
+            again[i].style.position = "absolute";
+            again[i].style.left = "20px";
+        }
+
+    } else {
+        menu.style.display = "none";
+        menu.style.height = "0";
+        heading.style.marginTop = "40px";
+        button.innerHTML = "≡";
+        button.style.borderRight = "1px solid darkgreen";
+        button.style.borderBottom = "1px solid darkgreen";
+        for (i=0; i < 3; i++) {
+            again[i].style.position = "absolute";
+            again[i].style.left = "20px";
+            again[i].style.marginTop = "0";
+        }
+    }
+});
+
+
+} else if (savedLanguage === "english") {
+    changeEverythingToEnglish();
+}
+    
+};
