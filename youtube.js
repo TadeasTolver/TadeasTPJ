@@ -1,3 +1,17 @@
+const observer = new IntersectionObserver((entries => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
+}));
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 window.onload = function() { 
 
 const englishButton = document.getElementById("english-yt");
@@ -25,6 +39,7 @@ function changeEverythingToEnglish() {
     vidTitleList[6].innerHTML = "That's beneficial...!!!";
     vidTitleList[9].innerHTML = "Are you subscribed to Tadeas Tolver?";
     vidTitleList[10].innerHTML = "Skittles Giants Gooey review.";
+    vidTitleList[12].innerHTML = "First forest beggar in CZ";
     vidText[0].innerHTML = "Video taken from an Air Greenland helicopter departing from Narsaq, South Greenland 2023";
     vidText[1].innerHTML = "Time-lapse video shot from the cockpit of an Air Greenland Bombardier Dash 8-200 landing in Nuuk, Greenland 2023.";
     vidText[2].innerHTML = "Video taken from a boat. Waterfall on Sermitsiaq mountain near Nuuk, West Greenland 2023.";
@@ -37,6 +52,9 @@ function changeEverythingToEnglish() {
     vidText[9].innerHTML = "Subscribe! Shot in Vysocina.";
     vidText[10].innerHTML = "Skittles Giants Gooey review.";
     vidText[11].innerHTML = "Video of a sleeping dog.";
+    vidText[12].innerHTML = "In this funny video, there is a hiker with a dog enjoying their trip. However, the hiker meets an disgusting forest beggar.";
+    vidText[13].innerHTML = "In this video, a dog won't let go of a tennis ball.";
+    vidText[14].innerHTML = "This video warns you, if you don't put the milk in the fridge, it will harden.";
 }
     
 function changeEverythingToCzech() {
@@ -64,6 +82,9 @@ function changeEverythingToCzech() {
     vidText[9].innerHTML = "Odebírejte! Natočeno na Vysočině.";
     vidText[10].innerHTML = "Ochutnávání Skittles Giants Gooey (sestra tam ruší!).";
     vidText[11].innerHTML = "Video spícího psa.";
+    vidText[12].innerHTML = "V tomto velice vtipném video je výletář se psem který si užívá výlet. Výletář však potká nepřijemného lesního žebráka.";
+    vidText[13].innerHTML = "V tomto video je pes který nechce pustit tenisový míč.";
+    vidText[14].innerHTML = "Toto video varuje, pokuď necháte mléko stát ztvrdne.";
 }
     
 
@@ -100,3 +121,40 @@ if (savedLanguage === "czech") {
 }
     
 };
+
+
+// menu button:
+
+const button = document.getElementById("menu-button");
+const menu = document.getElementById("menu");
+const heading = document.getElementById("yt-name-title");
+const again = document.getElementsByClassName("menu-link");
+button.addEventListener("click", () => {
+    if (button.innerHTML != "×") {
+        menu.style.display = "flex";
+        menu.style.height = "190px";
+        heading.style.marginTop = "140px";
+        button.innerHTML = "×";
+        button.style.border = "none";
+        again[0].style.marginTop = "70px";
+        again[1].style.marginTop = "110px";
+        again[2].style.marginTop = "150px";
+        for (i=0; i < 3; i++) {
+            again[i].style.position = "absolute";
+            again[i].style.left = "20px";
+        }
+
+    } else {
+        menu.style.display = "none";
+        menu.style.height = "0";
+        heading.style.marginTop = "40px";
+        button.innerHTML = "≡";
+        button.style.borderRight = "1px solid darkgreen";
+        button.style.borderBottom = "1px solid darkgreen";
+        for (i=0; i < 3; i++) {
+            again[i].style.position = "absolute";
+            again[i].style.left = "20px";
+            again[i].style.marginTop = "0";
+        }
+    }
+});
